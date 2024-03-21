@@ -20,7 +20,7 @@
 | Author(s) | Grégory PAGNOUX |
 | Reviewer(s) | Mathis LEBEL, Séréna BAVAROIS |
 | Created on | 21/03/2024 |
-| Last updated | 21/03/2024 |
+| Last updated | 22/03/2024 |
 |  |  |
 
 ![-](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)

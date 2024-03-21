@@ -58,7 +58,7 @@ At the end of the game the player discover that his soulmate has become zombie.
 ### A. Main Character
 
 The main character is a human.
-He moves thank's "zqsd" key of the AZERTY keyboard and "wasd" of the QWERTY keyboard. He can jump thank the space bar.
+He moves thank's "zqsd" key of the AZERTY keyboard and he can jump thank the space bar.
 He has a life bar of 100 at the beginning and he reload his life before and after each boss.
 
 ### B. Enemies
@@ -85,7 +85,7 @@ There are different types of enemies.
 
 ### D. Levels
 
-All levels have increasing difficulty and bosses have more dangerous powers
+All levels have increasing difficulty thanks less platforms, more enemies and more hidden path and bosses have more dangerous powers.
 
 ### E. Audio
 
@@ -113,11 +113,13 @@ All rights reserved. No parts of this story may be reproduced or used in many ma
 
 ### B. Age
 
+Our platformer is categorised PEGI 7
+
+<img src="/img/PEGI_7.png" alt="PEGI_7" width="75px">
+
 The age to play certain games is regulated by the PEGI limitation in Europeen Union or the ESRB in USA.
 Criterias are the violence, drugs, sex or money game.
 
 ![PEGI](/img/ESRB.jpg)
-
-Our platformer is categorised PEGI 7
 
 *source :* [Culture Game](https://www.culture-games.com/capsule-technique/pegi-le-systeme-devaluation-europeen-des-jeux-video) / [ESRB](https://www.esrb.org/)
