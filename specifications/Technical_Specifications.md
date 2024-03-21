@@ -9,7 +9,7 @@
   - [I. Overview](#i-overview)
     - [A. Project Introdction](#a-project-introdction)
     - [B. Team Development](#b-team-development)
-  - [Glossary](#glossary)
+  - [II. Implementation](#ii-implementation)
 
 </details>
 
@@ -43,12 +43,6 @@ Can you find your lost love?
 | <img src="https://avatars.githubusercontent.com/u/145991354?v=4" alt="Mathis LEBEL" width="75px"> <br> Mathis LEBEL | Developper Manager | [Mathis LEBEL profile](https://github.com/mathislebel)|  [mathis.lebel@algosup.com](mailto:mathis.lebel@algosup.com) |
 | <img src="https://avatars.githubusercontent.com/u/145995847?v=4" alt="Séréna BAVAROIS" width="75px"> <br> Séréna BAVAROIS | Designer Manager | [Séréna BAVAROIS profile](https://github.com/NanaChocolat)|  [serena.bavarois@algosup.com](mailto:gregory.pagnoux@algosup.com) |
 
+## II. Implementation
 
-
-![-](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
-
-## Glossary
-
-[^1]: ALGOSUP
-ALGOSUP is an IT school in Vierzon created in 2019 by Franck JEANNIN, Natacha BOEZ and Eric LARCHEVÊQUE. The goal of the school is to form student in the companies conditions, with team work, each roles that we can find in a company. A last thing, all the program is only in english.
-*source :* [ALGOSUP site](https://algosup.com)
+<!--TODO-->
