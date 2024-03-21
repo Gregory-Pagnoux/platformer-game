@@ -1,0 +1,54 @@
+# Apocalyptic Soulmate - Technical Specifications
+
+![-](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
+
+<details>
+<summary>📖 Table of content</summary>
+
+- [Apocalyptic Soulmate - Technical Specifications](#apocalyptic-soulmate---technical-specifications)
+  - [I. Overview](#i-overview)
+    - [A. Project Introdction](#a-project-introdction)
+    - [B. Team Development](#b-team-development)
+  - [Glossary](#glossary)
+
+</details>
+
+![-](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
+
+| | |
+| ----- | ----- |
+| Author(s) | Grégory PAGNOUX |
+| Reviewer(s) | Mathis LEBEL, Séréna BAVAROIS |
+| Created on | 21/03/2024 |
+| Last updated | 21/03/2024 |
+|  |  |
+
+![-](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
+
+## I. Overview
+
+### A. Project Introdction
+
+You are the last man in the world and you need to escape zombies and find your soulmate that you loose at the beginning of the invasion.
+For that, you need to find a door to pass each room and to be in secure place.
+Every two levels, you find a boss to earn new equipment like weapons, shield, portals, etc.
+
+Can you find your lost love?
+
+### B. Team Development
+
+| PERSON | ROLE | GITHUB | MAIL |
+| - | - | - | - |
+| <img src="https://avatars.githubusercontent.com/u/114397869?v=4" alt="Grégory PAGNOUX" width="75px"> <br> Grégory PAGNOUX | Writter Manager / Developper | [Grégory PAGNOUX profile](https://github.com/Gregory-Pagnoux) | [gregory.pagnoux@algosup.com](mailto:gregory.pagnoux@algosup.com) |
+| <img src="https://avatars.githubusercontent.com/u/145991354?v=4" alt="Mathis LEBEL" width="75px"> <br> Mathis LEBEL | Developper Manager | [Mathis LEBEL profile](https://github.com/mathislebel)|  [mathis.lebel@algosup.com](mailto:mathis.lebel@algosup.com) |
+| <img src="https://avatars.githubusercontent.com/u/145995847?v=4" alt="Séréna BAVAROIS" width="75px"> <br> Séréna BAVAROIS | Designer Manager | [Séréna BAVAROIS profile](https://github.com/NanaChocolat)|  [serena.bavarois@algosup.com](mailto:gregory.pagnoux@algosup.com) |
+
+
+
+![-](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
+
+## Glossary
+
+[^1]: ALGOSUP
+ALGOSUP is an IT school in Vierzon created in 2019 by Franck JEANNIN, Natacha BOEZ and Eric LARCHEVÊQUE. The goal of the school is to form student in the companies conditions, with team work, each roles that we can find in a company. A last thing, all the program is only in english.
+*source :* [ALGOSUP site](https://algosup.com)

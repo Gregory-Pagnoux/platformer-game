@@ -1,4 +1,4 @@
-# platformer-game
+# Apocalyptic Soulmate - README
 
 ## Game Introduction
 
@@ -14,7 +14,7 @@ The story take place in a post-apocalyptic future
 
 You are the last man in the world and you need to escape zombies and find your soulmate that you loose at the beginning of the invasion.
 For that, you need to find a door to pass each room and to be in secure place.
-Every three levels, you find a boss to earn new equipment like weapons, shield, portals, etc.
+Every two levels, you find a boss to earn new equipment like weapons, shield, portals, etc.
 
 Can you find your lost love?
 
@@ -26,11 +26,11 @@ Can you find your lost love?
 
 ## Team development
 
-| Name | Role | Image | GitHub |
+| PERSON | ROLE | GITHUB | MAIL |
 | - | - | - | - |
-| Grégory PAGNOUX | Writter Manager / Developper |[<img src="https://avatars.githubusercontent.com/u/114397869?v=4" alt="Grégory PAGNOUX" width="75px">](https://github.com/Gregory-Pagnoux)|[Grégory PAGNOUX profile](https://github.com/Gregory-Pagnoux)|
-| Mathis LEBEL | Developper Manager |[<img src="https://avatars.githubusercontent.com/u/145991354?v=4" alt="Mathis LEBEL" width="75px">](https://github.com/mathislebel)|[Mathis LEBEL profile](https://github.com/mathislebel)|
-|Séréna BAVAROIS| Designer Manager |[<img src="https://avatars.githubusercontent.com/u/145995847?v=4" alt="Séréna BAVAROIS" width="75px">](https://github.com/Mattstar64)|[Séréna BAVAROIS profile](https://github.com/NanaChocolat)|
+| <img src="https://avatars.githubusercontent.com/u/114397869?v=4" alt="Grégory PAGNOUX" width="75px"> <br> Grégory PAGNOUX | Writter Manager / Developper | [Grégory PAGNOUX profile](https://github.com/Gregory-Pagnoux) | [gregory.pagnoux@algosup.com](mailto:gregory.pagnoux@algosup.com) |
+| <img src="https://avatars.githubusercontent.com/u/145991354?v=4" alt="Mathis LEBEL" width="75px"> <br> Mathis LEBEL | Developper Manager | [Mathis LEBEL profile](https://github.com/mathislebel)|  [mathis.lebel@algosup.com](mailto:mathis.lebel@algosup.com) |
+| <img src="https://avatars.githubusercontent.com/u/145995847?v=4" alt="Séréna BAVAROIS" width="75px"> <br> Séréna BAVAROIS | Designer Manager | [Séréna BAVAROIS profile](https://github.com/NanaChocolat)|  [serena.bavarois@algosup.com](mailto:gregory.pagnoux@algosup.com) |
 
 ## Disclaimer
 
