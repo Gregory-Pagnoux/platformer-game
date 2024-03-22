@@ -44,7 +44,7 @@ Can you find your lost love?
 
 ### B. Team Development
 
-| PERSON | ROLE | GITHUB | MAIL |
+| NAME | ROLE | GITHUB | MAIL |
 | - | - | - | - |
 | <img src="https://avatars.githubusercontent.com/u/114397869?v=4" alt="Grégory PAGNOUX" width="75px"> <br> Grégory PAGNOUX | Writter Manager / Developper | [Grégory PAGNOUX profile](https://github.com/Gregory-Pagnoux) | [gregory.pagnoux@algosup.com](mailto:gregory.pagnoux@algosup.com) |
 | <img src="https://avatars.githubusercontent.com/u/145991354?v=4" alt="Mathis LEBEL" width="75px"> <br> Mathis LEBEL | Developper Manager | [Mathis LEBEL profile](https://github.com/mathislebel)|  [mathis.lebel@algosup.com](mailto:mathis.lebel@algosup.com) |
@@ -87,13 +87,18 @@ We need a big zombie character in the cartoon design in unique posture :
 
 - doesn't move
 
+<img src="/img/Boss1.png" alt="Bosses Characters">
+<img src="/img/Boss2-3.jpg" alt="Bosses Characters">
+
 ### C. Items
 
-**platforms**
+**Platforms**
 
-Platforms are long and short planks and metal beam
+Platforms are long and short planks.
 
-**teleporters**
+<img src="/img/wood_platforms.jpg" alt="Wood Platforms">
+
+**Teleporters**
 
 Teleporters are blue circles with brown embroidery
 
