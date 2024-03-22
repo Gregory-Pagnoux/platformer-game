@@ -49,7 +49,7 @@ At the end of the game the player discover that his soulmate has become zombie.
 
 | NAME | ROLE | GITHUB | MAIL |
 | - | - | - | - |
-| <img src="https://avatars.githubusercontent.com/u/114397869?v=4" alt="Grégory PAGNOUX" width="75px"> <br> Grégory PAGNOUX | Writter Manager / Developper | [Grégory PAGNOUX profile](https://github.com/Gregory-Pagnoux) | [gregory.pagnoux@algosup.com](mailto:gregory.pagnoux@algosup.com) |
+| <img src="https://avatars.githubusercontent.com/u/114397869?v=4" alt="Grégory PAGNOUX" width="75px"> <br> Grégory PAGNOUX | Writter / Ressources Manager | [Grégory PAGNOUX profile](https://github.com/Gregory-Pagnoux) | [gregory.pagnoux@algosup.com](mailto:gregory.pagnoux@algosup.com) |
 | <img src="https://avatars.githubusercontent.com/u/145991354?v=4" alt="Mathis LEBEL" width="75px"> <br> Mathis LEBEL | Developper Manager | [Mathis LEBEL profile](https://github.com/mathislebel)|  [mathis.lebel@algosup.com](mailto:mathis.lebel@algosup.com) |
 | <img src="https://avatars.githubusercontent.com/u/145995847?v=4" alt="Séréna BAVAROIS" width="75px"> <br> Séréna BAVAROIS | Designer Manager | [Séréna BAVAROIS profile](https://github.com/NanaChocolat)|  [serena.bavarois@algosup.com](mailto:gregory.pagnoux@algosup.com) |
 
