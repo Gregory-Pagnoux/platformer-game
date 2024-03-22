@@ -12,7 +12,10 @@
   - [III. Design](#iii-design)
     - [A. Background](#a-background)
     - [B. Characters](#b-characters)
+    - [C. Items](#c-items)
   - [II. Implementation](#ii-implementation)
+    - [A. Characters](#a-characters)
+    - [B. Items](#b-items)
 
 </details>
 
@@ -52,6 +55,9 @@ Can you find your lost love?
 
 We need a city ruins image in the cartoon design.
 
+<img src="/img/Background1-720x480.jpg" alt="Background 1">
+<img src="/img/Background2-720x480.jpg" alt="Background 2">
+
 ### B. Characters
 
 **Main**
@@ -70,6 +76,9 @@ We need a zombie character in different posture in the cartoon design :
 
 - walk right
 - walk left
+- lying
+
+<img src="/img/zombiesCharacters.jpg" alt="Zombies Characters">
 
 **Bosses**
 
@@ -77,11 +86,21 @@ We need a big zombie character in the cartoon design in unique posture :
 
 - doesn't move
 
+### C. Items
+
+**platforms**
+
+Platforms are long and short planks and metal beam
+
+**teleporters**
+
+Teleporters are blue circles with brown embroidery
+
 ## II. Implementation
 
 We have different classes to implement the game :
 
-**Characters**
+### A. Characters
 
 - for general characters (main, zombies, bosses)
   - name
@@ -93,12 +112,21 @@ We have different classes to implement the game :
   - inventory
 
 - for zombies characters
-  - 
+  - name
 
 - for bosses characters
+  - name
   - ability
 
-**Items**
+### B. Items
+
+- for platforms
+  - name
+  - position
+
+- for inventory
+  - index
+  - name
 
 - for weapons (iron bar, knife, robot, gun)
   - name
