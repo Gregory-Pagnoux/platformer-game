@@ -80,7 +80,7 @@ There are different types of enemies.
 | knife | +3 attack | boss n°1 |
 | shield | +2 defense | boss n°2 |
 | robot | +3 attack | boss n°3 |
-| gun | +5 attack | boss n°4 |
+| gun | +7 attack | boss n°4 |
 | teleporter | can be teleported in another zone | level 3 (after boss n°1) |
 
 ### D. Levels

@@ -73,10 +73,40 @@ We need a zombie character in different posture in the cartoon design :
 
 **Bosses**
 
+We need a big zombie character in the cartoon design in unique posture :
 
+- doesn't move
 
 ## II. Implementation
 
-We have different classes and 
+We have different classes to implement the game :
 
-<!--TODO-->
+**Characters**
+
+- for general characters (main, zombies, bosses)
+  - name
+  - speed
+  - life
+  - damage
+
+- for the main character
+  - inventory
+
+- for zombies characters
+  - 
+
+- for bosses characters
+  - ability
+
+**Items**
+
+- for weapons (iron bar, knife, robot, gun)
+  - name
+  - damage
+
+- for shield
+  - defense
+
+- for teleporter
+  - index
+  - position
