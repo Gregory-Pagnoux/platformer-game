@@ -9,11 +9,12 @@
   - [I. Overview](#i-overview)
     - [A. Project Introdction](#a-project-introdction)
     - [B. Team Development](#b-team-development)
-  - [III. Design](#iii-design)
+  - [II. Design](#ii-design)
     - [A. Background](#a-background)
     - [B. Characters](#b-characters)
     - [C. Items](#c-items)
-  - [II. Implementation](#ii-implementation)
+  - [III. Audios](#iii-audios)
+  - [IV. Implementation](#iv-implementation)
     - [A. Characters](#a-characters)
     - [B. Items](#b-items)
 
@@ -49,7 +50,7 @@ Can you find your lost love?
 | <img src="https://avatars.githubusercontent.com/u/145991354?v=4" alt="Mathis LEBEL" width="75px"> <br> Mathis LEBEL | Developper Manager | [Mathis LEBEL profile](https://github.com/mathislebel)|  [mathis.lebel@algosup.com](mailto:mathis.lebel@algosup.com) |
 | <img src="https://avatars.githubusercontent.com/u/145995847?v=4" alt="Séréna BAVAROIS" width="75px"> <br> Séréna BAVAROIS | Designer Manager | [Séréna BAVAROIS profile](https://github.com/NanaChocolat)|  [serena.bavarois@algosup.com](mailto:gregory.pagnoux@algosup.com) |
 
-## III. Design
+## II. Design
 
 ### A. Background
 
@@ -96,7 +97,18 @@ Platforms are long and short planks and metal beam
 
 Teleporters are blue circles with brown embroidery
 
-## II. Implementation
+## III. Audios
+
+We need three differents audios for the game :
+
+- background of level : [n°1](https://universal-soundbank.com/sounds/13826.mp3)
+- background of boss : [n°1](https://universal-soundbank.com/sounds/13821.mp3) / [n°2](https://universal-soundbank.com/sounds/13825.mp3
+)
+- death for zombies : [n°1](https://universal-soundbank.com/sounds/9680.mp3)
+
+*All audios are take on the [Universal Sounbank](https://universal-soundbank.com) site.*
+
+## IV. Implementation
 
 We have different classes to implement the game :
 
