@@ -9,6 +9,9 @@
   - [I. Overview](#i-overview)
     - [A. Project Introdction](#a-project-introdction)
     - [B. Team Development](#b-team-development)
+  - [III. Design](#iii-design)
+    - [A. Background](#a-background)
+    - [B. Characters](#b-characters)
   - [II. Implementation](#ii-implementation)
 
 </details>
@@ -43,6 +46,37 @@ Can you find your lost love?
 | <img src="https://avatars.githubusercontent.com/u/145991354?v=4" alt="Mathis LEBEL" width="75px"> <br> Mathis LEBEL | Developper Manager | [Mathis LEBEL profile](https://github.com/mathislebel)|  [mathis.lebel@algosup.com](mailto:mathis.lebel@algosup.com) |
 | <img src="https://avatars.githubusercontent.com/u/145995847?v=4" alt="Séréna BAVAROIS" width="75px"> <br> Séréna BAVAROIS | Designer Manager | [Séréna BAVAROIS profile](https://github.com/NanaChocolat)|  [serena.bavarois@algosup.com](mailto:gregory.pagnoux@algosup.com) |
 
+## III. Design
+
+### A. Background
+
+We need a city ruins image in the cartoon design.
+
+### B. Characters
+
+**Main**
+
+We need a human character in different posture in the cartoon design :
+
+- doesn't move
+- walk right
+- walk left
+- jump
+- punch
+
+**Zombies**
+
+We need a zombie character in different posture in the cartoon design :
+
+- walk right
+- walk left
+
+**Bosses**
+
+
+
 ## II. Implementation
+
+We have different classes and 
 
 <!--TODO-->
