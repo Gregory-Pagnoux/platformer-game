@@ -115,11 +115,11 @@ All rights reserved. No parts of this story may be reproduced or used in many ma
 
 Our platformer is categorised PEGI 7
 
-<img src="/img/PEGI_7.png" alt="PEGI_7" width="75px">
+<img src="img/PEGI_7.png" alt="PEGI_7" width="75px">
 
 The age to play certain games is regulated by the PEGI limitation in Europeen Union or the ESRB in USA.
 Criterias are the violence, drugs, sex or money game.
 
-![PEGI](/img/ESRB.jpg)
+![PEGI](img/ESRB.jpg)
 
 *source :* [Culture Game](https://www.culture-games.com/capsule-technique/pegi-le-systeme-devaluation-europeen-des-jeux-video) / [ESRB](https://www.esrb.org/)
