@@ -5,8 +5,7 @@ int main() {
     sf::RenderWindow window(sf::VideoMode::getDesktopMode(), "Platformer", sf::Style::Fullscreen);
     window.setVerticalSyncEnabled(true);
 
-
-   while (window.isOpen())
+    while (window.isOpen())
     {
         sf::Event event;
         while (window.pollEvent(event))
