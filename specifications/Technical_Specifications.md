@@ -56,8 +56,8 @@ Can you find your lost love?
 
 We need a city ruins image in the cartoon design.
 
-<img src="/img/Background1-720x480.jpg" alt="Background 1">
-<img src="/img/Background2-720x480.jpg" alt="Background 2">
+<img src="img/Background1-720x480.jpg" alt="Background 1">
+<img src="img/Background2-720x480.jpg" alt="Background 2">
 
 ### B. Characters
 
@@ -71,6 +71,8 @@ We need a human character in different posture in the cartoon design :
 - jump
 - punch
 
+<img src="img/mainCharacter.png" alt="Main Characters">
+
 **Zombies**
 
 We need a zombie character in different posture in the cartoon design :
@@ -79,7 +81,7 @@ We need a zombie character in different posture in the cartoon design :
 - walk left
 - lying
 
-<img src="/img/zombiesCharacters.jpg" alt="Zombies Characters">
+<img src="img/zombiesCharacters.jpg" alt="Zombies Characters">
 
 **Bosses**
 
@@ -87,16 +89,19 @@ We need a big zombie character in the cartoon design in unique posture :
 
 - doesn't move
 
-<img src="/img/Boss1.png" alt="Bosses Characters">
-<img src="/img/Boss2-3.jpg" alt="Bosses Characters">
+<img src="img/Boss1.png" alt="Bosses Characters" width=100px>
+<img src="img/Boss2.png" alt="Bosses Characters" width=200px>
+<img src="img/Boss3.png" alt="Bosses Characters" width=200px>
 
 ### C. Items
 
 **Platforms**
 
-Platforms are long and short planks.
+Platforms are long, medium, and short planks.
 
-<img src="/img/wood_platforms.jpg" alt="Wood Platforms">
+<img src="img/big.png" alt="Wood Platforms" width=150px>
+<img src="img/medium.png" alt="Wood Platforms" width=150px>
+<img src="img/small.png" alt="Wood Platforms" width=150px>
 
 **Teleporters**
 
