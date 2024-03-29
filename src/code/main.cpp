@@ -73,9 +73,9 @@ int main() {
 
             if (state == MENU) {
                 if (event.type == sf::Event::KeyPressed) {
-                    if (event.key.code == sf::Keyboard::Up) {
+                    if (event.key.code == sf::Keyboard::Z) {
                         selectedOption = (selectedOption + 2) % 3;
-                    } else if (event.key.code == sf::Keyboard::Down) {
+                    } else if (event.key.code == sf::Keyboard::S) {
                         selectedOption = (selectedOption + 1) % 3;
                     } else if (event.key.code == sf::Keyboard::Enter) {
                         state = FALLING;
