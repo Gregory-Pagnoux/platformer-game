@@ -13,16 +13,30 @@ The story take place in a post-apocalyptic future
 **Story**
 
 You are the last man in the world and you need to escape zombies and find your soulmate that you loose at the beginning of the invasion.
-For that, you need to find a door to pass each room and to be in secure place.
+For that, you need to explore the city and defeat bosses to find a safe zone.
 Every two levels, you find a boss to earn new equipment like weapons, shield, portals, etc.
 
 Can you find your lost love?
 
-<img src="img/PEGI_7.png" alt="PEGI_7" width="75px">
+<img src="specifications/img/PEGI_7.png" alt="PEGI_7" width="75px">
 
 ## Launch the game
 
-To launch the game : 
+To launch the game:
+- open your terminal
+- go on the platformer-game/src/code folder
+- install g++
+- install [SFML](https://www.sfml-dev.org/download/sfml/2.6.1/)
+- for Windows:
+  - run this command: "g++ menu.cpp -o sfml-app -lsfml-graphics -lsfml-window -lsfml-system"
+  - run this command: "sfml-app.exe
+- for Linux:
+  - run this command: "g++ -c menu.cpp"
+  - run this command: "g++ menu.cpp -o sfml-app -lsfml-graphics -lsfml-window -lsfml-system"
+  - run this command: "./sfml-app"
+- for Mac:
+  - run this command: "g++ -std=c++17 menu.cpp -I/opt/homebrew/Cellar/sfml/2.6.1/include -o prog -L/opt/homebrew/Cellar/sfml/2.6.1/lib -lsfml-graphics -lsfml-window -lsfml-system"
+  - run this command: "./prog"
 
 ## Team development
 
