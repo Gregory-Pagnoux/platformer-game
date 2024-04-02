@@ -1,6 +1,4 @@
-#include <SFML/Graphics.hpp>
-#include <vector>
-#include <iostream>
+#include "Game.h"
 
 enum GameState {
     MENU,
@@ -20,6 +18,8 @@ int main() {
         return -1;
     }
 
+    
+    std::cout<< "PlayTextGood" <<std::endl;
     sf::Text playText("Play", font, 100);
     playText.setPosition(window.getSize().x / 2 - playText.getGlobalBounds().width / 2, window.getSize().y / 3);
     sf::Text exitText("Exit", font, 100);
@@ -38,16 +38,16 @@ int main() {
             if (state == MENU) {
                 if (event.type == sf::Event::KeyPressed) {
                     if (event.key.code == sf::Keyboard::Z) {
-                        selectedOption = (selectedOption + 2) % 3; // Correction de la navigation
+                        selectedOption = (selectedOption + 2) % 3; 
                         std::cout << "Z pressed" << std::endl;
                     } else if (event.key.code == sf::Keyboard::S) {
-                        selectedOption = (selectedOption + 1) % 3; // Correction de la navigation
+                        selectedOption = (selectedOption + 1) % 3;
                         std::cout << "S pressed" << std::endl;
                     } else if (event.key.code == sf::Keyboard::Enter) {
                         if (selectedOption == 0) {
-                            state = GAME; // Commence le jeu
+                            state = GAME; 
                         } else if (selectedOption == 1) {
-                            window.close(); // Sortie du jeu
+                            window.close(); 
                         }
                     }
                 }
@@ -60,10 +60,12 @@ int main() {
             playText.setFillColor(selectedOption == 0 ? sf::Color::Red : sf::Color::White);
             exitText.setFillColor(selectedOption == 1 ? sf::Color::Red : sf::Color::White);
 
-            window.draw(playText);
-            window.draw(exitText);
+        std::cout<< "DrawBeing" <<std::endl;
+        window.draw(playText);
+        window.draw(exitText);
+        std::cout<< "DrawFinish" <<std::endl;
         }
-
+        std::cout<< "DisplayIsGood" <<std::endl;
         window.display();
     }
 
