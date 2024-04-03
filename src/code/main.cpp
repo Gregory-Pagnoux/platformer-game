@@ -8,7 +8,7 @@ enum GameState {
 
 sf::Sprite PlayerSprite;
 sf::Vector2f velocity(0.f, 0.f);
-bool isOnGround = false
+bool isOnGround = false;
 
 int main() {
     std::cout << "SetWindow" << std::endl;
@@ -55,23 +55,20 @@ int main() {
         return -1;
     }
 
-
     sf::Sprite backgrounds;
     backgrounds.setTexture(BackgroundTexture);
 
     float windowRatio = float(window.getSize().x) / float(window.getSize().y);
     float backgroundRatio = float(BackgroundTexture.getSize().x) / float(BackgroundTexture.getSize().y);
     float scale = (windowRatio > backgroundRatio) ? float(window.getSize().x) / float(BackgroundTexture.getSize().x) :
-                                                      float(window.getSize().y) / float(BackgroundTexture.getSize().y);
+                                                    float(window.getSize().y) / float(BackgroundTexture.getSize().y);
     backgrounds.setScale(scale, scale);
 
-  
     if (windowRatio > backgroundRatio) {
         backgrounds.setPosition(0, (window.getSize().y - BackgroundTexture.getSize().y * scale) / 2);
     } else {
         backgrounds.setPosition((window.getSize().x - BackgroundTexture.getSize().x * scale) / 2, 0);
     }
-   
 
     sf::Sprite backgrounds2;
     backgrounds2.setTexture(BackgroundTexture2);
@@ -79,7 +76,7 @@ int main() {
     float windowRatio2 = float(window.getSize().x) / float(window.getSize().y);
     float background2Ratio = float(BackgroundTexture2.getSize().x) / float(BackgroundTexture2.getSize().y);
     float scale2 = (windowRatio > backgroundRatio) ? float(window.getSize().x) / float(BackgroundTexture2.getSize().x) :
-                                                      float(window.getSize().y) / float(BackgroundTexture2.getSize().y);
+                                                    float(window.getSize().y) / float(BackgroundTexture2.getSize().y);
     backgrounds2.setScale(scale, scale);
 
     if (windowRatio > background2Ratio) {
@@ -91,20 +88,17 @@ int main() {
     sf::Sprite backgrounds3;
     backgrounds3.setTexture(BackgroundTexture3);
 
-  
     float windowRatio3 = float(window.getSize().x) / float(window.getSize().y);
     float background3Ratio = float(BackgroundTexture3.getSize().x) / float(BackgroundTexture3.getSize().y);
     float scale3 = (windowRatio > backgroundRatio) ? float(window.getSize().x) / float(BackgroundTexture3.getSize().x) :
-                                                      float(window.getSize().y) / float(BackgroundTexture3.getSize().y);
+                                                    float(window.getSize().y) / float(BackgroundTexture3.getSize().y);
     backgrounds3.setScale(scale, scale);
 
-    
     if (windowRatio > background2Ratio) {
         backgrounds3.setPosition(0, (window.getSize().y - BackgroundTexture3.getSize().y * scale) / 2);
     } else {
         backgrounds3.setPosition((window.getSize().x - BackgroundTexture3.getSize().x * scale) / 2, 0);
     }
-
 
     sf::Text playText("Play", font, 100);
     playText.setPosition(window.getSize().x / 2 - playText.getGlobalBounds().width / 2, window.getSize().y / 3);
@@ -115,6 +109,20 @@ int main() {
     float backgroundSpeed = 7.0f;
     float backgroundSpeed2 = 7.0f;
     float backgroundSpeed3 = 7.0f;
+
+    sf::Music music1;
+    if (!music1.openFromFile("../sounds/LevelBackground1.wav")) {
+        std::cerr << "Failed to load music." << std::endl;
+        return -1;
+    }
+
+    sf::Music music2;
+    if (!music2.openFromFile("../sounds/LevelBackground2.wav")) {
+        std::cerr << "Failed to load music." << std::endl;
+        return -1;
+    }
+
+    music1.play();
 
     while (window.isOpen()) {
         sf::Event event;
@@ -132,6 +140,8 @@ int main() {
                     } else if (event.key.code == sf::Keyboard::Enter) {
                         if (selectedOption == 0) {
                             state = GAME;
+                            music1.stop();
+                            music2.play();
                         } else if (selectedOption == 1) {
                             window.close();
                         }
@@ -149,14 +159,14 @@ int main() {
             window.draw(playText);
             window.draw(exitText);
         } else if (state == GAME) {
-    
+
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
                 backgrounds.move(-backgroundSpeed, 0);
             } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Q)) {
                 backgrounds.move(backgroundSpeed, 0);
             }
 
-             if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
                 backgrounds2.move(-backgroundSpeed2, 0);
             } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Q)) {
                 backgrounds2.move(backgroundSpeed2, 0);
@@ -184,7 +194,7 @@ int main() {
                 PlayerSprite.setTexture(PRunRightSheet[currentFrame]);
                 ClockAnimation.restart();
               }
-            }
+            
         }
         window.draw(PlayerSprite);
         
