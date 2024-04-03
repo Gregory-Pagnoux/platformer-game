@@ -127,6 +127,18 @@ int main() {
         return -1;
     }
 
+    sf::Music enemiesDeath;
+    if (!enemiesDeath.openFromFile("../sounds/EnemiesDeath.wav")) {
+        std::cerr << "Failed to load music." << std::endl;
+        return -1;
+    }
+
+    sf::Music mainDeath;
+    if (!mainDeath.openFromFile("../sounds/MainDeath.wav")) {
+        std::cerr << "Failed to load music." << std::endl;
+        return -1;
+    }
+
     menu.play();
 
     while (window.isOpen()) {
