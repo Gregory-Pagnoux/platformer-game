@@ -113,19 +113,49 @@ int main() {
     float backgroundSpeed2 = 7.0f;
     float backgroundSpeed3 = 7.0f;
 
-    sf::Music music1;
-    if (!music1.openFromFile("../sounds/LevelBackground1.wav")) {
+    sf::Music menu;
+    if (!menu.openFromFile("../sounds/Menu.wav")) {
         std::cerr << "Failed to load music." << std::endl;
         return -1;
     }
 
-    sf::Music music2;
-    if (!music2.openFromFile("../sounds/LevelBackground2.wav")) {
+    sf::Music level;
+    if (!level.openFromFile("../sounds/LevelBackground.wav")) {
         std::cerr << "Failed to load music." << std::endl;
         return -1;
     }
 
-    music1.play();
+    sf::Music boss1;
+    if (!boss1.openFromFile("../sounds/BossBackground1.wav")) {
+        std::cerr << "Failed to load music." << std::endl;
+        return -1;
+    }
+
+    sf::Music boss2;
+    if (!boss2.openFromFile("../sounds/BossBackground2.wav")) {
+        std::cerr << "Failed to load music." << std::endl;
+        return -1;
+    }
+
+    sf::Music finalBoss;
+    if (!finalBoss.openFromFile("../sounds/FinalBoss.wav")) {
+        std::cerr << "Failed to load music." << std::endl;
+        return -1;
+    }
+
+    sf::Music enemiesDeath;
+    if (!enemiesDeath.openFromFile("../sounds/EnemiesDeath.wav")) {
+        std::cerr << "Failed to load music." << std::endl;
+        return -1;
+    }
+
+    sf::Music mainDeath;
+    if (!mainDeath.openFromFile("../sounds/MainDeath.wav")) {
+        std::cerr << "Failed to load music." << std::endl;
+        return -1;
+    }
+
+    menu.play();
 
     while (window.isOpen()) {
         sf::Event event;
@@ -143,8 +173,8 @@ int main() {
                     } else if (event.key.code == sf::Keyboard::Enter) {
                         if (selectedOption == 0) {
                             state = GAME;
-                            music1.stop();
-                            music2.play();
+                            menu.stop();
+                            level.play();
                         } else if (selectedOption == 1) {
                             window.close();
                         }
