@@ -3,16 +3,29 @@
 enum GameState {
     MENU,
     GAME,
-    
+    PLAYER
 };
+
+sf::Sprite PlayerSprite;
+sf::Vector2f velocity(0.f, 0.f);
+bool isOnGround = false
 
 int main() {
     std::cout << "SetWindow" << std::endl;
     sf::RenderWindow window(sf::VideoMode::getDesktopMode(), "Platformer", sf::Style::Fullscreen);
     window.setVerticalSyncEnabled(true);
+    sf::Clock ClockAnimation;
 
     GameState state = MENU;
     int selectedOption = 0;
+
+    bool isRunning = false;
+    bool lastDirectionLeft = false;
+    int currentFrame = 0;
+
+    PlayerSprite.setTexture(PRunRightSheet[0]);
+    PlayerSprite.setScale(sf::Vector2f(0.5f, 0.5)); 
+    PlayerSprite.setPosition(375, 275);
 
     std::cout << "loadFont" << std::endl;
     sf::Font font;
@@ -159,8 +172,22 @@ int main() {
            window.draw(backgrounds3);
            window.draw(backgrounds2);
           
-        }
+        } if(state == PLAYER){
+            std::cout<< "loop" <<std::endl;
 
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::D)){
+              isRunning = true;
+              lastDirectionLeft = false;
+               std::cout<< "loop" <<std::endl;
+              if(ClockAnimation.getElapsedTime().asSeconds() > 0.1f){
+                currentFrame = (currentFrame + 1) % PRunRightSheet.size();
+                PlayerSprite.setTexture(PRunRightSheet[currentFrame]);
+                ClockAnimation.restart();
+              }
+            }
+        }
+        window.draw(PlayerSprite);
+        
         window.display();
     }
 

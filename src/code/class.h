@@ -22,7 +22,7 @@ public:
     
     int powerUp;
    
-    bool isRunning;
+    bool isRunning ;    
     bool isRunningL;
 
 

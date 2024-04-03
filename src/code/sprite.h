@@ -38,9 +38,9 @@ std::vector<sf::Texture> RunRightSheet = loadCharacterSheet("../sprites/MonsterR
 // std::vector<sf::Texture> DIEGutsSheet = loadCharacterSheet("Imgs/Guts/die");
 // std::vector<sf::Texture> DIELGutsSheet = loadCharacterSheet("Imgs/Guts/dieL");
 
-// // player
-// std::vector<sf::Texture> IdleShadrSheet = loadCharacterSheet("Imgs/Shadr/Idle");
-// std::vector<sf::Texture> IdleLShadrSheet = loadCharacterSheet("Imgs/Shadr/IdleL");
+// player
+ std::vector<sf::Texture> PRunRightSheet = loadCharacterSheet("../sprites/Player/playerRunR");
+ std::vector<sf::Texture> PRunLeftSheet = loadCharacterSheet("../sprites/Player/playerRunL");
 // std::vector<sf::Texture> RunShadrSheet = loadCharacterSheet("Imgs/Shadr/Run");
 // std::vector<sf::Texture> RunLShadrSheet = loadCharacterSheet("Imgs/Shadr/RunL");
 // std::vector<sf::Texture> CRHShadrSheet = loadCharacterSheet("Imgs/Shadr/Crh");
