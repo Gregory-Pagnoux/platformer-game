@@ -9,6 +9,8 @@ enum GameState {
 sf::Sprite PlayerSprite;
 sf::Vector2f velocity(0.f, 0.f);
 bool isOnGround = false;
+bool collision = false;
+int gravity= 10;
 
 int main() {
     std::cout << "SetWindow" << std::endl;
@@ -22,10 +24,11 @@ int main() {
     bool isRunning = false;
     bool lastDirectionLeft = false;
     int currentFrame = 0;
-
+    int x = 375;
+    int y = 275;
     PlayerSprite.setTexture(PRunRightSheet[0]);
     PlayerSprite.setScale(sf::Vector2f(0.5f, 0.5)); 
-    PlayerSprite.setPosition(375, 275);
+    PlayerSprite.setPosition(x, y);
 
     std::cout << "loadFont" << std::endl;
     sf::Font font;
@@ -181,8 +184,10 @@ int main() {
            window.draw(backgrounds);
            window.draw(backgrounds3);
            window.draw(backgrounds2);
-          
-        } if(state == PLAYER){
+        } if(state == PLAYER - 1){
+            
+            std::cout<< "state="<<state<<std::endl;
+            std::cout<< "player="<<PLAYER<<std::endl;
             std::cout<< "loop" <<std::endl;
 
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::D)){
@@ -194,7 +199,25 @@ int main() {
                 PlayerSprite.setTexture(PRunRightSheet[currentFrame]);
                 ClockAnimation.restart();
               }
-            
+               
+            }
+
+             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Q)){
+              isRunning = true;
+              lastDirectionLeft = true;
+               std::cout<< "loop" <<std::endl;
+              if(ClockAnimation.getElapsedTime().asSeconds() > 0.1f){
+                currentFrame = (currentFrame + 1) % PRunLeftSheet.size();
+                PlayerSprite.setTexture(PRunLeftSheet[currentFrame]);
+                ClockAnimation.restart();
+              }
+             }
+            if (collision == false){
+                y += gravity;
+                PlayerSprite.setPosition(x, y);
+            }
+               
+        
         }
         window.draw(PlayerSprite);
         
