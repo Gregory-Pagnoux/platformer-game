@@ -103,6 +103,13 @@ int main() {
     float backgroundSpeed2 = 7.0f;
     float backgroundSpeed3 = 7.0f;
 
+    sf::Music music;
+    if (!music.openFromFile("../sounds/LevelBackground1.wav")) {
+        std::cerr << "Failed to load music." << std::endl;
+        return -1;
+    }
+    music.play();
+
     while (window.isOpen()) {
         sf::Event event;
         while (window.pollEvent(event)) {
@@ -136,7 +143,7 @@ int main() {
             window.draw(playText);
             window.draw(exitText);
         } else if (state == GAME) {
-    
+
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
                 backgrounds.move(-backgroundSpeed, 0);
             } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Q)) {

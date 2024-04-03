@@ -25,19 +25,20 @@ Can you find your lost love?
 ## Launch the game
 
 To launch the game:
+
 - open your terminal
 - go on the platformer-game/src/code folder
 - install g++
 - install [SFML](https://www.sfml-dev.org/download/sfml/2.6.1/)
 - for Windows:
-  - run this command: "g++ main.cpp -o sfml-app -lsfml-graphics -lsfml-window -lsfml-system"
+  - run this command: "g++ main.cpp -o sfml-app -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio"
   - run this command: "sfml-app.exe
 - for Linux:
   - run this command: "g++ -c main.cpp"
-  - run this command: "g++ main.cpp -o sfml-app -lsfml-graphics -lsfml-window -lsfml-system"
+  - run this command: "g++ main.cpp -o sfml-app -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio"
   - run this command: "./sfml-app"
 - for Mac:
-  - run this command: "g++ -std=c++17 main.cpp -I/opt/homebrew/Cellar/sfml/2.6.1/include -o prog -L/opt/homebrew/Cellar/sfml/2.6.1/lib -lsfml-graphics -lsfml-window -lsfml-system"
+  - run this command: "g++ -std=c++17 main.cpp -I/opt/homebrew/Cellar/sfml/2.6.1/include -o prog -L/opt/homebrew/Cellar/sfml/2.6.1/lib -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio"
   - run this command: "./prog"
 
 ![-](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
