@@ -4,6 +4,7 @@ enum GameState {
     MENU,
     GAME,
     PLAYER
+
 };
 
 sf::Sprite PlayerSprite;
@@ -11,6 +12,8 @@ sf::Vector2f velocity(0.f, 0.f);
 bool isOnGround = false;
 bool collision = false;
 int gravity= 10;
+bool isJumping = false;
+int Jumping = 5;
 
 int main() {
     std::cout << "SetWindow" << std::endl;
@@ -113,49 +116,19 @@ int main() {
     float backgroundSpeed2 = 7.0f;
     float backgroundSpeed3 = 7.0f;
 
-    sf::Music menu;
-    if (!menu.openFromFile("../sounds/Menu.wav")) {
-        std::cerr << "Failed to load music." << std::endl;
-        return -1;
-    }
+    // sf::Music music1;
+    // if (!music1.openFromFile("../sounds/LevelBackground1.wav")) {
+    //     std::cerr << "Failed to load music." << std::endl;
+    //     return -1;
+    // }
 
-    sf::Music level;
-    if (!level.openFromFile("../sounds/LevelBackground.wav")) {
-        std::cerr << "Failed to load music." << std::endl;
-        return -1;
-    }
+    // sf::Music music2;
+    // if (!music2.openFromFile("../sounds/LevelBackground2.wav")) {
+    //     std::cerr << "Failed to load music." << std::endl;
+    //     return -1;
+    // }
 
-    sf::Music boss1;
-    if (!boss1.openFromFile("../sounds/BossBackground1.wav")) {
-        std::cerr << "Failed to load music." << std::endl;
-        return -1;
-    }
-
-    sf::Music boss2;
-    if (!boss2.openFromFile("../sounds/BossBackground2.wav")) {
-        std::cerr << "Failed to load music." << std::endl;
-        return -1;
-    }
-
-    sf::Music finalBoss;
-    if (!finalBoss.openFromFile("../sounds/FinalBoss.wav")) {
-        std::cerr << "Failed to load music." << std::endl;
-        return -1;
-    }
-
-    sf::Music enemiesDeath;
-    if (!enemiesDeath.openFromFile("../sounds/EnemiesDeath.wav")) {
-        std::cerr << "Failed to load music." << std::endl;
-        return -1;
-    }
-
-    sf::Music mainDeath;
-    if (!mainDeath.openFromFile("../sounds/MainDeath.wav")) {
-        std::cerr << "Failed to load music." << std::endl;
-        return -1;
-    }
-
-    menu.play();
+    // music1.play();
 
     while (window.isOpen()) {
         sf::Event event;
@@ -173,8 +146,8 @@ int main() {
                     } else if (event.key.code == sf::Keyboard::Enter) {
                         if (selectedOption == 0) {
                             state = GAME;
-                            menu.stop();
-                            level.play();
+                            // music1.stop();
+                            // music2.play();
                         } else if (selectedOption == 1) {
                             window.close();
                         }
@@ -242,17 +215,13 @@ int main() {
                 ClockAnimation.restart();
               }
              }
-            if (collision == false){
-                y += gravity;
-                PlayerSprite.setPosition(x, y);
-            }
+             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)){
+               isJumping = true;
                
-        
-        }
+             }
         window.draw(PlayerSprite);
-        
-        window.display();
     }
-
+        window.display();
+}
     return 0;
 }

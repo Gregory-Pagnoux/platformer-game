@@ -2,6 +2,7 @@
 #include <SFML/Window.hpp>
 #include <iostream>
 #include <filesystem>
+#include <string>
 #include <vector>
 #include <cstdlib>
 #include <SFML/Audio.hpp>
