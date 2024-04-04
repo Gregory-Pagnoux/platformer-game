@@ -6,6 +6,7 @@
 #include <vector>
 #include <cstdlib>
 #include <SFML/Audio.hpp>
+#include <array>
 
 // load character sheet
 std::vector<sf::Texture> loadCharacterSheet(const std::string& directoryPath) {
@@ -42,8 +43,8 @@ std::vector<sf::Texture> RunRightSheet = loadCharacterSheet("../sprites/MonsterR
 // player
  std::vector<sf::Texture> PRunRightSheet = loadCharacterSheet("../sprites/Player/playerRunR");
  std::vector<sf::Texture> PRunLeftSheet = loadCharacterSheet("../sprites/Player/playerRunL");
-// std::vector<sf::Texture> RunShadrSheet = loadCharacterSheet("Imgs/Shadr/Run");
-// std::vector<sf::Texture> RunLShadrSheet = loadCharacterSheet("Imgs/Shadr/RunL");
+ std::vector<sf::Texture> PJumpRightSheet = loadCharacterSheet("../Sprites/Player/playerJumpR");
+ std::vector<sf::Texture> PJumpLeftSheet = loadCharacterSheet("../Sprites/Player/playerJumpL");
 // std::vector<sf::Texture> CRHShadrSheet = loadCharacterSheet("Imgs/Shadr/Crh");
 // std::vector<sf::Texture> CRHLShadrSheet = loadCharacterSheet("Imgs/Shadr/CrhL");
 // std::vector<sf::Texture> JMPShadrSheet = loadCharacterSheet("Imgs/Shadr/Jmp");

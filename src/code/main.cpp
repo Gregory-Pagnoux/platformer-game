@@ -17,14 +17,28 @@ int Jumping = 5;
 bool isRunning = false;
 bool lastDirectionLeft = false;
 int currentFrame = 0;
-int x = 375;
-int y = 275;
+int x = 0;
+int y = 1080-300;
+
+#define SPEED 10
+
+
+void move(sf::RectangleShape* shape, int speed){
+    shape->setPosition(shape->getPosition().x + speed, shape->getPosition().y);
+}
 
 int main() {
     std::cout << "SetWindow" << std::endl;
     sf::RenderWindow window(sf::VideoMode::getDesktopMode(), "Platformer", sf::Style::Fullscreen);
     window.setVerticalSyncEnabled(true);
     sf::Clock ClockAnimation;
+
+    std::array<sf::RectangleShape, 1000> arr;
+    for(int i = 0; i < 100; i++){
+        arr[i].setSize(sf::Vector2f(200, 20));
+        arr[i].setPosition((rand() % (1920*12))+400, (rand() % 800)+200);
+        arr[i].setFillColor(sf::Color::Red);
+    }
 
     GameState state = MENU;
     int selectedOption = 0;
@@ -67,16 +81,7 @@ int main() {
     exitText.setPosition(window.getSize().x / 2 - exitText.getGlobalBounds().width / 2, window.getSize().y / 3 + 150);
 
     float backgroundSpeed = 7.0f;
-
-    // Create platforms
-    std::vector<sf::RectangleShape> platformRects;
-    for (int i = 0; i < 10; ++i) {
-        sf::RectangleShape platform;
-        platform.setSize(sf::Vector2f(static_cast<float>(rand() % 100 + 50), 20.f)); // Random width between 50 and 150, height of 20
-        platform.setPosition(static_cast<float>(rand() % (window.getSize().x - 150)), static_cast<float>(rand() % (window.getSize().y - 20))); // Random position
-        platform.setFillColor(sf::Color::Red);
-        platformRects.push_back(platform);
-    }
+    float PlatformSpeed = 7.0f;
 
     while (window.isOpen()) {
         sf::Event event;
@@ -112,27 +117,30 @@ int main() {
         } else if (state == GAME) {
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
                 backgrounds.move(-backgroundSpeed, 0);
+                for(int i = 0; i < 100; i++){
+                    move(&arr[i], -SPEED);
+                }
             } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Q)) {
                 backgrounds.move(backgroundSpeed, 0);
+                for(int i = 0; i < 100; i++){
+                    move(&arr[i], SPEED);
+                }
             }
+
+
             window.draw(backgrounds);
 
-            // Draw platforms
-            for (const auto& platform : platformRects) {
-                window.draw(platform);
-            }
+             for(int i = 0; i < 100; i++){
+            std::cout<<"draw"<<std::endl;
+            window.draw(arr[i]);
+        }
         } 
         if(state == PLAYER - 1){
             
-            
-            std::cout<< "state="<<state<<std::endl;
-            std::cout<< "player="<<PLAYER<<std::endl;
-            std::cout<< "loop" <<std::endl;
-
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::D)){
               isRunning = true;
               lastDirectionLeft = false;
-               std::cout<< "loop" <<std::endl;
+               std::cout<<  "loop" <<std::endl;
               if(ClockAnimation.getElapsedTime().asSeconds() > 0.1f){
                 currentFrame = (currentFrame + 1) % PRunRightSheet.size();
                 PlayerSprite.setTexture(PRunRightSheet[currentFrame]);
@@ -153,6 +161,7 @@ int main() {
              }
         window.draw(PlayerSprite);
     }
+        
         window.display();
 }
     return 0;
