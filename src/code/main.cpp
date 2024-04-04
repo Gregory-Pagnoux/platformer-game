@@ -14,6 +14,11 @@ bool collision = false;
 int gravity= 10;
 bool isJumping = false;
 int Jumping = 5;
+ bool isRunning = false;
+    bool lastDirectionLeft = false;
+    int currentFrame = 0;
+    int x = 375;
+    int y = 275;
 
 int main() {
     std::cout << "SetWindow" << std::endl;
@@ -24,11 +29,6 @@ int main() {
     GameState state = MENU;
     int selectedOption = 0;
 
-    bool isRunning = false;
-    bool lastDirectionLeft = false;
-    int currentFrame = 0;
-    int x = 375;
-    int y = 275;
     PlayerSprite.setTexture(PRunRightSheet[0]);
     PlayerSprite.setScale(sf::Vector2f(0.5f, 0.5)); 
     PlayerSprite.setPosition(x, y);
@@ -188,6 +188,8 @@ int main() {
            window.draw(backgrounds3);
            window.draw(backgrounds2);
         } if(state == PLAYER - 1){
+
+            
             
             std::cout<< "state="<<state<<std::endl;
             std::cout<< "player="<<PLAYER<<std::endl;
@@ -217,7 +219,12 @@ int main() {
              }
              if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)){
                isJumping = true;
-               
+               y -= Jumping;
+               PlayerSprite.setPosition(x, y);
+             }
+             if(collision == false){
+                y += gravity;
+                PlayerSprite.setPosition(x,y);
              }
         window.draw(PlayerSprite);
     }
