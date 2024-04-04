@@ -28,7 +28,7 @@ int main() {
 
     GameState state = MENU;
     int selectedOption = 0;
-
+   
     PlayerSprite.setTexture(PRunRightSheet[0]);
     PlayerSprite.setScale(sf::Vector2f(0.5f, 0.5)); 
     PlayerSprite.setPosition(x, y);
@@ -116,19 +116,49 @@ int main() {
     float backgroundSpeed2 = 7.0f;
     float backgroundSpeed3 = 7.0f;
 
-    // sf::Music music1;
-    // if (!music1.openFromFile("../sounds/LevelBackground1.wav")) {
-    //     std::cerr << "Failed to load music." << std::endl;
-    //     return -1;
-    // }
+    sf::Music menu;
+    if (!menu.openFromFile("../sounds/Menu.wav")) {
+        std::cerr << "Failed to load music." << std::endl;
+        return -1;
+    }
 
-    // sf::Music music2;
-    // if (!music2.openFromFile("../sounds/LevelBackground2.wav")) {
-    //     std::cerr << "Failed to load music." << std::endl;
-    //     return -1;
-    // }
+    sf::Music level;
+    if (!level.openFromFile("../sounds/LevelBackground.wav")) {
+        std::cerr << "Failed to load music." << std::endl;
+        return -1;
+    }
 
-    // music1.play();
+    sf::Music boss1;
+    if (!boss1.openFromFile("../sounds/BossBackground1.wav")) {
+        std::cerr << "Failed to load music." << std::endl;
+        return -1;
+    }
+
+    sf::Music boss2;
+    if (!boss2.openFromFile("../sounds/BossBackground2.wav")) {
+        std::cerr << "Failed to load music." << std::endl;
+        return -1;
+    }
+
+    sf::Music finalBoss;
+    if (!finalBoss.openFromFile("../sounds/FinalBoss.wav")) {
+        std::cerr << "Failed to load music." << std::endl;
+        return -1;
+    }
+
+    sf::Music enemiesDeath;
+    if (!enemiesDeath.openFromFile("../sounds/EnemiesDeath.wav")) {
+        std::cerr << "Failed to load music." << std::endl;
+        return -1;
+    }
+
+    sf::Music mainDeath;
+    if (!mainDeath.openFromFile("../sounds/MainDeath.wav")) {
+        std::cerr << "Failed to load music." << std::endl;
+        return -1;
+    }
+
+    menu.play();
 
     while (window.isOpen()) {
         sf::Event event;
@@ -146,8 +176,8 @@ int main() {
                     } else if (event.key.code == sf::Keyboard::Enter) {
                         if (selectedOption == 0) {
                             state = GAME;
-                            // music1.stop();
-                            // music2.play();
+                            menu.stop();
+                            level.play();
                         } else if (selectedOption == 1) {
                             window.close();
                         }
@@ -166,27 +196,63 @@ int main() {
             window.draw(exitText);
         } else if (state == GAME) {
 
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
-                backgrounds.move(-backgroundSpeed, 0);
-            } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Q)) {
-                backgrounds.move(backgroundSpeed, 0);
+            if (event.key.code == sf::Keyboard::Escape) {
+                state = MENU;
+                level.stop();
+                menu.play();
             }
 
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
-                backgrounds2.move(-backgroundSpeed2, 0);
-            } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Q)) {
-                backgrounds2.move(backgroundSpeed2, 0);
+            if (event.key.code == sf::Keyboard::D) {
+                sf::FloatRect playerBounds = PlayerSprite.getGlobalBounds();
+                sf::FloatRect background2Bounds = backgrounds2.getGlobalBounds();
+
+                if (!playerBounds.intersects(background2Bounds)) {
+                    backgrounds.move(-backgroundSpeed, 0);
+                }
+            } else if (event.key.code == sf::Keyboard::Q) {
+                sf::FloatRect playerBounds = PlayerSprite.getGlobalBounds();
+                sf::FloatRect background2Bounds = backgrounds2.getGlobalBounds();
+
+                if (!playerBounds.intersects(background2Bounds)) {
+                    backgrounds.move(backgroundSpeed, 0);
+                }
             }
 
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
-                backgrounds3.move(-backgroundSpeed3, 0);
-            } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Q)) {
-                backgrounds3.move(backgroundSpeed3, 0);
+            if (event.key.code == sf::Keyboard::D) {
+                sf::FloatRect playerBounds = PlayerSprite.getGlobalBounds();
+                sf::FloatRect background2Bounds = backgrounds2.getGlobalBounds();
+
+                if (!playerBounds.intersects(background2Bounds)) {
+                    backgrounds2.move(-backgroundSpeed2, 0);
+                }
+            } else if (event.key.code == sf::Keyboard::Q) {
+                sf::FloatRect playerBounds = PlayerSprite.getGlobalBounds();
+                sf::FloatRect background2Bounds = backgrounds2.getGlobalBounds();
+
+                if (!playerBounds.intersects(background2Bounds)) {
+                    backgrounds2.move(backgroundSpeed2, 0);
+                }
             }
 
-           window.draw(backgrounds);
-           window.draw(backgrounds3);
-           window.draw(backgrounds2);
+            if (event.key.code == sf::Keyboard::D) {
+                sf::FloatRect playerBounds = PlayerSprite.getGlobalBounds();
+                sf::FloatRect background2Bounds = backgrounds2.getGlobalBounds();
+
+                if (!playerBounds.intersects(background2Bounds)) {
+                    backgrounds3.move(-backgroundSpeed3, 0);
+                }
+            } else if (event.key.code == sf::Keyboard::Q) {
+                sf::FloatRect playerBounds = PlayerSprite.getGlobalBounds();
+                sf::FloatRect background2Bounds = backgrounds2.getGlobalBounds();
+
+                if (!playerBounds.intersects(background2Bounds)) {
+                    backgrounds3.move(backgroundSpeed3, 0);
+                }
+            }
+
+            window.draw(backgrounds);
+            window.draw(backgrounds3);
+            window.draw(backgrounds2);
         } if(state == PLAYER - 1){
 
             
@@ -195,40 +261,39 @@ int main() {
             std::cout<< "player="<<PLAYER<<std::endl;
             std::cout<< "loop" <<std::endl;
 
-            if(sf::Keyboard::isKeyPressed(sf::Keyboard::D)){
-              isRunning = true;
-              lastDirectionLeft = false;
-               std::cout<< "loop" <<std::endl;
-              if(ClockAnimation.getElapsedTime().asSeconds() > 0.1f){
-                currentFrame = (currentFrame + 1) % PRunRightSheet.size();
-                PlayerSprite.setTexture(PRunRightSheet[currentFrame]);
-                ClockAnimation.restart();
-              }
-               
+            if (event.key.code == sf::Keyboard::D) {
+                isRunning = true;
+                lastDirectionLeft = false;
+                std::cout<< "loop" <<std::endl;
+                if(ClockAnimation.getElapsedTime().asSeconds() > 0.1f){
+                    currentFrame = (currentFrame + 1) % PRunRightSheet.size();
+                    PlayerSprite.setTexture(PRunRightSheet[currentFrame]);
+                    ClockAnimation.restart();
+                }
+            }
+            if (event.key.code == sf::Keyboard::Q) {
+                isRunning = true;
+                lastDirectionLeft = true;
+                std::cout<< "loop" <<std::endl;
+                if (ClockAnimation.getElapsedTime().asSeconds() > 0.1f){
+                    currentFrame = (currentFrame + 1) % PRunLeftSheet.size();
+                    PlayerSprite.setTexture(PRunLeftSheet[currentFrame]);
+                    ClockAnimation.restart();
+                }
             }
 
-             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Q)){
-              isRunning = true;
-              lastDirectionLeft = true;
-               std::cout<< "loop" <<std::endl;
-              if(ClockAnimation.getElapsedTime().asSeconds() > 0.1f){
-                currentFrame = (currentFrame + 1) % PRunLeftSheet.size();
-                PlayerSprite.setTexture(PRunLeftSheet[currentFrame]);
-                ClockAnimation.restart();
-              }
-             }
-             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)){
-               isJumping = true;
-               y -= Jumping;
-               PlayerSprite.setPosition(x, y);
-             }
-             if(collision == false){
+            if(collision == false){
                 y += gravity;
-                PlayerSprite.setPosition(x,y);
-             }
-        window.draw(PlayerSprite);
-    }
+                PlayerSprite.setPosition(x, y);
+            }
+
+            if (event.key.code == sf::Keyboard::Space) {
+                isJumping = true;
+            }
+            window.draw(PlayerSprite);
+        }
+>>>>>>> ef843bc0feac975f6de393805fa62826be1d8396
         window.display();
-}
+    }
     return 0;
 }
