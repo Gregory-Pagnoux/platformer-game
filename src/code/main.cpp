@@ -13,7 +13,7 @@ bool isOnGround = false;
 bool collision = false;
 int gravity= 10;
 bool isJumping = false;
-int Jumping = 5;
+int Jumping = 10;
 bool isRunning = false;
 bool lastDirectionLeft = false;
 int currentFrame = 0;
@@ -39,6 +39,11 @@ int main() {
         arr[i].setPosition((rand() % (1920*12))+400, (rand() % 800)+200);
         arr[i].setFillColor(sf::Color::Red);
     }
+
+    bool canMoveR = true;
+    bool canMoveL = true;
+    bool canMoveU = true;
+    bool canMoveD = true;
 
     GameState state = MENU;
     int selectedOption = 0;
@@ -115,15 +120,58 @@ int main() {
             window.draw(playText);
             window.draw(exitText);
         } else if (state == GAME) {
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
-                backgrounds.move(-backgroundSpeed, 0);
-                for(int i = 0; i < 100; i++){
-                    move(&arr[i], -SPEED);
+            for(auto &arr:arr){
+                if(PlayerSprite.getGlobalBounds().intersects(arr.getGlobalBounds())){
+                   collision = true;
+                   if(PlayerSprite.getPosition().x+400 >= arr.getPosition().x){
+                     canMoveR = false;
+                     canMoveL = true;
+                     canMoveU = true;
+                     canMoveD = true;
+                   }
+                   else if(PlayerSprite.getPosition().x <= arr.getPosition().x+400){
+                     canMoveR = true;
+                     canMoveL = false;
+                     canMoveU = true;
+                     canMoveD = true;
+                   }
+                   else if(PlayerSprite.getPosition().y <= arr.getPosition().y+400){
+                     canMoveR = true;
+                     canMoveL = true;
+                     canMoveU = false;
+                     canMoveD = true;
+                   }
+                   else if(PlayerSprite.getPosition().y -300 <= arr.getPosition().y){
+                     canMoveR = true;
+                     canMoveL = true;
+                     canMoveU = true;
+                     canMoveD = false;
+                   }
+                   break;
                 }
-            } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Q)) {
-                backgrounds.move(backgroundSpeed, 0);
-                for(int i = 0; i < 100; i++){
-                    move(&arr[i], SPEED);
+                else{
+                    collision = false;
+                    canMoveR = true;
+                     canMoveL = true;
+                     canMoveU = true;
+                }
+            }
+               
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
+                if(canMoveR){
+                    backgrounds.move(-backgroundSpeed, 0);
+                    for(int i = 0; i < 100; i++){
+                        move(&arr[i], -SPEED);
+                    }
+                }
+
+            } 
+            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Q)) {
+                if(canMoveL){
+                    backgrounds.move(backgroundSpeed, 0);
+                    for(int i = 0; i < 100; i++){
+                        move(&arr[i], SPEED);
+                    }
                 }
             }
 
@@ -159,10 +207,22 @@ int main() {
                 ClockAnimation.restart();
               }
              }
+             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)){
+                canMoveU = true;
+                y -= Jumping;
+                PlayerSprite.setPosition(x,y);
+               }
+               if(sf::Keyboard::isKeyPressed(sf::Keyboard::S)){
+                canMoveD = true;
+                y += gravity;
+                PlayerSprite.setPosition(x,y);
+               }
+    
         window.draw(PlayerSprite);
     }
         
-        window.display();
-}
+    window.display();
+
+    }
     return 0;
 }
