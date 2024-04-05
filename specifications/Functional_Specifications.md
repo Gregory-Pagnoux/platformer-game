@@ -40,9 +40,9 @@
 
 ### A. Project Introdction
 
-You are the last man in the world and you need to escape zombies and find your soulmate that you loose at the beginning of the invasion.
-For that, you need to find a door to pass each room and to be in secure place.
-Every two levels, you find a boss to earn new equipment like weapons, shield, portals, etc.
+You are the last man in the world and you need to escape zombies and find your soulmate that you lost at the beginning of the invasion.
+For that, you need to explore the city and avoid all obstacles to be in safe place.
+Every two levels, you fight a boss to earn new equipment like weapons, shield, boost, etc.
 At the end of the game the player discover that his soulmate has become zombie.
 
 ### B. Team Development
@@ -89,11 +89,11 @@ All levels have increasing difficulty thanks less platforms, more enemies and mo
 
 ### E. Audio
 
-A background music is present and some fights sounds.
+Different backgrounds music are present in the menu, in game and some fights and death sounds.
 
 ## III. Target Audience
 
-Our targeted audience are people who like platformer post-apocalyptic universe.
+Our targeted audience are people who like platformer post-apocalyptic universe of 16 years old and more.
 
 ## IV. User Interface (UI)
 
@@ -113,9 +113,9 @@ All rights reserved. No parts of this story may be reproduced or used in many ma
 
 ### B. Age
 
-Our platformer is categorised PEGI 7
+Our platformer is categorised PEGI 16
 
-<img src="img/PEGI_7.png" alt="PEGI_7" width="75px">
+<img src="img/PEGI_16.png" alt="PEGI_16" width="75px">
 
 The age to play certain games is regulated by the PEGI limitation in Europeen Union or the ESRB in USA.
 Criterias are the violence, drugs, sex or money game.

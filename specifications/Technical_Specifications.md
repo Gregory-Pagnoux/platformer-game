@@ -103,6 +103,12 @@ Platforms are long, medium, and short planks.
 <img src="img/medium.png" alt="Wood Platforms" width=150px>
 <img src="img/small.png" alt="Wood Platforms" width=150px>
 
+**syringes**
+
+Thanks this item, you can gain som power, like speed or shield.
+
+<img src="img/syringes.png" alt="syringes" width=150px>
+
 **Teleporters**
 
 Teleporters are blue circles with brown embroidery

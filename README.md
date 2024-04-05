@@ -6,7 +6,7 @@
 
 **Type**
 
-The game is a 2D platformer written in C++
+The game is a 2D platformer written in C++ and designed in the cartoon univers.
 
 **Timelapse**
 
@@ -15,12 +15,12 @@ The story take place in a post-apocalyptic future
 **Story**
 
 You are the last man in the world and you need to escape zombies and find your soulmate that you loose at the beginning of the invasion.
-For that, you need to explore the city and defeat bosses to find a safe zone.
+For that, you need to explore the city, avoid all obstacles and defeat bosses to find a safe zone.
 Every two levels, you find a boss to earn new equipment like weapons, shield, portals, etc.
 
 Can you find your lost love?
 
-<img src="specifications/img/PEGI_7.png" alt="PEGI_7" width="75px">
+<img src="specifications/img/PEGI_16.png" alt="PEGI_16" width="75px">
 
 ## Launch the game
 
