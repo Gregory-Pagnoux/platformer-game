@@ -8,6 +8,7 @@
 #include <SFML/Audio.hpp>
 #include <array>
 
+
 // load character sheet
 std::vector<sf::Texture> loadCharacterSheet(const std::string& directoryPath) {
     std::vector<sf::Texture> textures;
